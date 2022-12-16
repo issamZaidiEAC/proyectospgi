@@ -1,0 +1,374 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.supercontainer {
+    width: 100vw;
+    height: 100vh;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.overlay::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background-image: url(../src/pexels-antoni-shkraba-4348401.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 0;
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    /* width: 100%; */
+    
+    flex: 1 1 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    font-weight: bold;
+}
+
+nav {
+    /* width: 40%;
+    height: 100%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav > img {
+    width: 40%;
+    flex: 1 1 40%;
+}
+
+.login {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.login > img {
+    height: 30%;
+}
+
+.crearCuenta {
+    padding: 10px 10%;
+    color: white;
+    background-color: #F02D00;
+    border-radius: 5px;
+    font-weight: lighter;
+    text-decoration: none;
+    border: none;
+}
+
+main {
+    /* width: 100%;
+    height: 85%; */
+    flex:1 1 85%;
+}
+
+section {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+section > div {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: bold;
+}
+
+section > h1 {
+    font-size: 2.5em;
+    font-weight: normal;
+    text-shadow: 0px 4px 4px #00000085;
+}
+
+section > h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    text-shadow: 0px 4px 4px #00000085;
+}
+
+
+dialog {
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    border: none;
+}
+
+.dialogContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.imagenes {
+    width: 47.5%;
+    height: 100%;
+    background-image: url(../src/imagenDomestika_2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.texto {
+    width: 52.5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2%;
+}
+
+.cabecera {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5%;
+}
+
+.cabecera > p {
+    font-size: 0.8rem;
+    padding: 0% 5%;
+    text-align: center;
+    width: 90%;
+}
+
+.logoDomestika {
+    height: 12.5%;
+}
+
+.botonFacebook {
+    width: 90%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    background-color: #3b5998;
+    color: white;
+    border-radius: 2px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.botonFacebook > img {
+    height: 40%;
+    filter: invert(100%);
+}
+
+.cerrarDialog {
+    width: 2%;
+    height: 4%;
+    color: rgb(109, 109, 109);
+    position: absolute;
+    top: 1%;
+    left: 97%;
+    border: none;
+    background-image: url(../src/XCloseDelete.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.formulario {
+    width: 100%;
+    height: 70%;
+    background-color: #e0e0e0;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.formulario > form {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+fieldset {
+    border: none;
+}
+
+#registroDatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+    border-color: rgb(109, 109, 109);
+}
+
+#registroDatos > legend {
+    font-size: 0.7em;
+    color: rgb(109, 109, 109);
+    padding: 2.5% 0%;
+}
+
+#registroDatos > img {
+    position: absolute;
+    width: 4%;
+    top: 51%;
+    left: 92.5%;
+}
+
+#registroDatos > input {
+    width: 100%;
+    height: 37.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.7em;
+    color: rgb(109, 109, 109);
+    padding: 2%;
+}
+
+#registroFecha {
+    display: flex;
+    flex-direction: row;
+    align-items: first baseline;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 20%;
+    gap: 5%;
+}
+
+#registroFecha > legend {
+    font-size: 0.7em;
+    color: rgb(109, 109, 109);
+    padding-bottom: 2.5%;
+}
+
+#registroFecha > p {
+    font-size: 0.7em;
+    color: rgb(109, 109, 109);
+}
+
+#registroFecha > select {
+    height: 70%;
+    border-color: rgb(109, 109, 109);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.6em;
+    color: rgb(109, 109, 109);
+    width: auto;
+}
+
+/* #dia {
+    width: auto;
+}
+
+#mes {
+    width: 30%;
+}
+
+#año {
+    width: 20%;
+}  */
+
+#botonRegistro {
+    width: 30%;
+    height: 15%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(109, 109, 109);
+    font-weight: bold;
+}
+
+.condiciones {
+    font-size: 0.6em;
+    color: rgb(109, 109, 109);
+    padding: 2.5% 0%;
+    width: 90%;
+}
+
+.entrarCuenta {
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    border-top: 1px solid rgb(109, 109, 109);
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entrarCuenta > a {
+    color: #F02D00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+button:hover{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+
+@media (max-width: 900px) {
+    .imagenes {
+        display: none;
+    }
+
+    .texto {
+        width: 100%;
+    }
+}

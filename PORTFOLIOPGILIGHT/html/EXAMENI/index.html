@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAMEN PGI ISSAM ZAIDI 24/11</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script async src="https://basicons.xyz/embed.js"> </script>
+</head>
+<body>
+    <div class="wrapper">
+        <main>
+            <section class="home">
+                <h1>¿Te gusta el Arte?</h1>
+                <h2>Descubre un cuadro cada día</h2>
+                <button onclick="window.modal.showModal()">Ver</button>
+                <div class="socialLogoContainer">
+                    <img src="src/facebook.png">
+                    <img src="src/logotipo-de-instagram.png">
+                    <img src="src/gorjeo.png">
+                </div>
+            </section>
+            <section class="background"></section>
+        </main>
+    </div>
+    <dialog id="modal">
+        <button class="like"><img id="emptylike" src="src/corazon.png"></button>
+        <div class="contentModal">
+            <img src="src/mona-lisa.png">
+            <h3>La Gioconda</h3>
+            <button onclick="window.modal.close()">Aceptar</button>
+        </div>
+    </dialog>
+    <script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
