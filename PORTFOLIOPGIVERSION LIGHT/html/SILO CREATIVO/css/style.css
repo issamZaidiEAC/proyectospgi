@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* CONFIGURACIÓN BÁSICA */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: work sans;
+    background-color: #f7f5ef;
+    flex-direction: column;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ESTILO PARA EL ENCABEZADO */
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    height: 20vh;
+}
+
+#abrirMenu, #burguer {
+    display: none;
+} 
+
+
+header > img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    transition: all 1s ease-in;
+}
+
+header > ul > li {
+    padding: 10px;
+    transition: all 1s ease-in;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+/* CONTENIDO */
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 100px;
+
+}
+
+article{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.info > h1 {
+	font-size: 7vw;
+	text-align: center;
+    color: #B92326;
+}
+
+.info p {
+    padding: 0% 20%;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.info > a {
+    background-color: #BF393B;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.5s ease-in;
+}
+
+.info > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* PLANTILLAS */
+
+.card {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardImageBox {
+    width: 300px;
+    height: 300px;
+    height: 70%;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.card:first-child  .cardImage {
+    background-image: url(../src/trouvelot-tema-wordpress.webp);
+}
+
+.card:nth-child(2)  .cardImage {
+    background-image: url(../src/rosalie-plantilla-wordpress-lifestyle.webp);
+}
+
+.card:nth-child(3) .cardImage {
+    background-image: url(../src/janice-plantilla-wordpress-para-bloggers-fashion.webp);
+}
+
+.news {
+    background-color: white;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #BF393B;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    /* flex: 1 1 30%; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.social {
+    width: 30%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social img {
+    height: 90%;
+    filter: invert(100%);
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+.social img:hover {
+    opacity: 1;
+}
+
+.sitemap {
+    display: flex;
+    flex-direction: column;
+}
+
+/* VENTANA MODAL */
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buscar {
+    width: 100%;
+    height : 40%;
+    background-color: #B92326;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.5s ease;
+}
+
+.buscar > input {
+    width: 90%;
+    border-bottom: 1px solid black;
+    font-size: 3em;
+    color: white;
+}
+
+
+.buscar > button {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    color: white;
+    font-weight: 900;
+}
+
+.tagPanel {
+    width: 100%;
+    height: 60%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TAGS */
+
+
+.etiquetas , .categorias{
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.etiquetas > div {
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.etiquetas a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    #abrirMenu, #burguer {
+        display: flex;
+    }
+
+    .header > img {
+        height: 20px;
+    }
+    
+    .navMenu {
+        position: absolute;
+        width: 100vw;
+        height: 50vh;
+        left: 0px;
+        bottom: 0px;
+        background-color: #f7f5ef;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+        display: none;
+    }
+
+    .navMenu .ocultar {
+        clip-path: inset(0 0 100% 0);
+        filter: opacity(0%);
+    }
+
+    .navMenu .mostrar {
+        clip-path: inset(0 0 0 0);
+        filter: opacity(0%);
+    }
+    
+
+    .navMenu > ul {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1100px){
+    .info div {
+        max-width: 80vw;
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+    }
+}
+
+.mostrar {
+    display: flex;
+}
+
+.ocultar {
+    display: none;
+}
