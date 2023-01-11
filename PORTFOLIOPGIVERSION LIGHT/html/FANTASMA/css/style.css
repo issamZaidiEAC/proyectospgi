@@ -9,20 +9,20 @@ body {
 
 @keyframes fantasma{
     0%, 100% {
-        top: 100px;
+        top: 30px;
     }
     50% {
-        top: 200px;
+        top: 90px;
     }
 }
 
 @keyframes aura{
     0%, 100% {
-        top: 300px;
-        opacity: 100%
+        top: 20px;
+        opacity: 100%;
     }
     50% {
-        top: 400px;
+        top: 100px;
         opacity: 0%;
     }
 }
@@ -34,11 +34,11 @@ body {
 }
 .aura {
     position: absolute;
-    top: 50%;
+    top: 20px;
     left: 50%;
-    transform: translate(-50%,-50%);
-    width: 7s00px;
-    height: 700px;
+    transform: translate(-50%, 0%);
+    width: 450px;
+    height: 450px;
     border-radius: 100%;
     background-image: radial-gradient(#9EEEB0, rgba(119, 119, 119, 0));
     animation-name: aura;
@@ -48,9 +48,9 @@ body {
 
 .fantasma {
     position: absolute;
-    top: 50%;
+    top: 30px;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, 0%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -219,7 +219,7 @@ body {
     border-radius: 100%;
     background-color: #271c1c;
     position: absolute;
-    top: 90%;
+    top: 550px;
     left: 50%;
     transform: translate(-50%, 0%);
     animation-name: sombra;
