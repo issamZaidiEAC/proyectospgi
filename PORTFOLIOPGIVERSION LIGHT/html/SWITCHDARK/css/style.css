@@ -30,6 +30,7 @@ body {
 	background-color: brown;
 	padding: 20px;
     border-radius: 100px;
+	transition: all 0.5s ease-in;
 }
 
 .label img {
@@ -41,7 +42,21 @@ body {
 	width: 160px;
 	height:160px;
     top: 20px;
-    left: 50%;
-	border-radius:100px ;
-	background-color: red;
+	border-radius: 100px;
+    transition: all 0.5s ease;
+}
+
+
+.darkcheckbox {
+	background-color: rgb(104, 27, 27);
+}
+
+.ballLight {
+	left: 20px;
+	background-color: brown;
+}
+
+.ballDark {
+	left: 180px;
+	background-color: rgb(104, 27, 27);
 }
