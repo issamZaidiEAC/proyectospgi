@@ -1,9 +1,10 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body {
     background-color: #3d3144;
-    overflow: hidden;
 }
 
 @keyframes fantasma{
@@ -26,12 +27,17 @@ body {
     }
 }
 
+.container {
+    width: 100vw;
+    height: 100vh;
+
+}
 .aura {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 700px;
+    width: 7s00px;
     height: 700px;
     border-radius: 100%;
     background-image: radial-gradient(#9EEEB0, rgba(119, 119, 119, 0));
@@ -56,26 +62,25 @@ body {
 .cabeza {
     position: absolute;
     border-radius: 100%;
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     background-color: #f7f3f0;
 }
 
 .cuerpo {
     position: absolute;
-    width: 348px;
-    height: 348px;
+    width: 250px;
+    height: 250px;
     background-color: #f7f3f0;
-    top: 175px;
+    top: 125px;
 }
 
 .patitas {
     position: absolute;
-    width: 350px;
-    height: 350px;
+    width: 250px;
     display: flex;
     flex-direction: row;
-    top: 475px;
+    top: 325px;
 }
 
 .patitas > div{
@@ -167,7 +172,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     position: absolute;
-    width: 400px;
+    width: 300px;
     height: 100px;
     top: 200px;
 }
@@ -226,3 +231,4 @@ body {
     animation-name: ojitos;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+}

@@ -1,5 +1,5 @@
 const audio = new Audio('../recursos/music.mp3'); 
 
-window.addEventListener('load', function(e){
+window.addEventListener('load', function(){
     audio.play();
 });
