@@ -227,7 +227,7 @@ body {
     animation-iteration-count: infinite;
 }
 
-.pupilas:hover {
+.pupilas:active {
     animation-name: ojitos;
     animation-duration: 3s;
     animation-iteration-count: infinite;
