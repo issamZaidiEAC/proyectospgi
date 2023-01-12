@@ -1,0 +1,88 @@
+/* IMPORTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* AJUSTES GENERALES */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Press Start 2P";
+}
+
+/*  ENCABEZADO */
+
+header {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 3vh;
+    gap: 30px;
+}
+
+/* MAIN */
+
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column; 
+    padding: 20px;
+    gap: 50px;   
+}
+
+/* CARTA DE PRODUCTO QUE SE ESTA VISUALIZANDO*/
+
+.itemBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.itemImg {
+    width: 50%;
+    display: flex;
+    border-radius: 20px;
+}
+
+.itemInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.otherItems {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.itemCard {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.itemCard  div {
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    border-radius: 25px;
+}
+
+
+
+
