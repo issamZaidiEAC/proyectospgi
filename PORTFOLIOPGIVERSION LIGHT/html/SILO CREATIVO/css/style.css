@@ -15,7 +15,7 @@ body {
 }
 
 .wrapper{
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -112,18 +112,14 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 50px;
 }
 
-section{
+section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	gap: 100px;
-
 }
 
 article{
@@ -134,16 +130,31 @@ article{
 	gap: 10px;
 }
 
-.info > h1 {
-	font-size: 7vw;
-	text-align: center;
-    color: #B92326;
+.info {
+    gap: 60px;
 }
 
-.info p {
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.titulo h1 {
+	font-size: 86px;
+    font-weight: 600;
+	text-align: center;
+    color: #B92326;
+    max-width: 910px;
+}
+
+.titulo p {
     padding: 0% 20%;
     text-align: center;
-    font-size: 2vw;
+    font-size: 21px;
+    font-weight: 400px;
+    color: grey;
 }
 
 .info > a {
@@ -164,21 +175,28 @@ article{
 }
 
 /* PLANTILLAS */
-
+.plantillas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
 .card {
     width: 300px;
-    height: 400px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
 .cardImageBox {
     width: 300px;
-    height: 300px;
     height: 70%;
+    margin: 0 auto;
     overflow: hidden;
-    border-radius: 25px;
+    border-radius: 5px;
 }
 
 .cardImage {
@@ -186,6 +204,19 @@ article{
     height: 100%;
     background-size: cover;
 }
+
+.cardInfo {
+    font-weight: 100;
+    color: gray;
+    width: 100%;
+}
+
+
+
+/* .cardImage:hover {
+
+} */
+
 
 .card:first-child  .cardImage {
     background-image: url(../src/trouvelot-tema-wordpress.webp);
@@ -204,6 +235,19 @@ article{
 .news {
     background-color: white;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.news > h1 {
+    width: 100%;
+    padding: 20px;
+}
+
+.news > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 /* FOOTER */
@@ -376,6 +420,8 @@ footer {
         width: 100%;
     }
 }
+
+
 
 .mostrar {
     display: flex;
