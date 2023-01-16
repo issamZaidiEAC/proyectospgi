@@ -15,12 +15,40 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-behavior: smooth;
+    overflow-y: overlay;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* TRACK */
+::-webkit-scrollbar-track {
+    background: #ffffff00;
+}
+  
+  /* DESLIZADOR DEL SCROLLBAR */
+::-webkit-scrollbar-thumb {
+    background: #ffffff00;
+    margin: 5px;
+    border-radius: 5px;
+    height: 100px;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+  
+  /* DESLIZADOR - HOVER*/
+::-webkit-scrollbar-thumb:hover {
+    background: #0078f8;
+}
+
 
 /*  ENCABEZADO */
 
 header {
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     display: flex;
     flex-direction: row;
@@ -58,7 +86,6 @@ main {
     width: 90%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
@@ -93,6 +120,7 @@ main {
     height: 100%;
     background-size: cover;
     background-position: center;
+    
 }
 
 .itemImg > div:nth-child(2) > div:first-child {
@@ -118,12 +146,13 @@ main {
 /* SECCION INFERIOR - OTROS PRODUCTOS QUE SE PRESENTAN COMO SUGERENCIA */
 
 .otherItems {
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 70px;
+    gap: 100px;
+    padding: 20px;
     overflow-x: scroll;
 }
 
@@ -150,7 +179,7 @@ main {
 
 footer {
     width: 100%;
-    height: 10vh;
+    height: 5vh;
     padding: 20px;
     color: white;
     background-color: black;
@@ -169,6 +198,7 @@ footer {
 /* VERSION ESCRITORIO REDUCIDA */
 
 @media (min-width: 992px) {}
+
 
 /* VERSION TABLET*/
 
