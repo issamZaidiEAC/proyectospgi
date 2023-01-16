@@ -11,10 +11,16 @@
     font-family: "Press Start 2P";
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /*  ENCABEZADO */
 
 header {
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     display: flex;
     flex-direction: row;
@@ -34,55 +40,140 @@ header {
 /* MAIN */
 
 main {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column; 
+    gap: 50px; 
+    align-items: center;  
+}
+
+.breadcrumbs {
+    width: 100%;
     padding: 20px;
-    gap: 50px;   
 }
 
 /* CARTA DE PRODUCTO QUE SE ESTA VISUALIZANDO*/
 
 .itemBox {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .itemImg {
     width: 50%;
     display: flex;
-    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    gap: 10px;
 }
 
+.itemImg > div:first-child {
+    width: 100%;
+    height: 70%;
+    background-image: url(../img/gato1a.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.itemImg > div:nth-child(2) {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.itemImg > div:nth-child(2) > div {
+    width: 30%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.itemImg > div:nth-child(2) > div:first-child {
+    background-image: url(../img/gato1b.jpg);
+}
+
+.itemImg > div:nth-child(2) > div:nth-child(2) {
+    background-image: url(../img/gato1c.jpg);
+}
+
+.itemImg > div:nth-child(2) > div:last-child {
+    background-image: url(../img/gato1d.jpg);
+}
+
+
 .itemInfo {
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
+/* SECCION INFERIOR - OTROS PRODUCTOS QUE SE PRESENTAN COMO SUGERENCIA */
+
 .otherItems {
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    overflow-x: scroll;
+}
+
+.otherItems::-webkit-scrollbar {
+    display: none;
 }
 
 .itemCard {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    cursor: grab;
 }
 
 .itemCard  div {
     width: 300px;
-    height: 300px;
+    height: 400px;
     background-color: black;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 
+/* FOOTER */
 
+footer {
+    width: 100%;
+    height: 10vh;
+    padding: 20px;
+    color: white;
+    background-color: black;
+}
 
+/* RESPONSIVE */
+
+/* VERSION ESCRITORIO MUY GRANDE*/
+
+@media (min-width: 1400px) {}
+
+/* VERSION ESCRITORIO GRANDE*/
+
+@media (min-width: 1200px) {}
+
+/* VERSION ESCRITORIO REDUCIDA */
+
+@media (min-width: 992px) {}
+
+/* VERSION TABLET*/
+
+@media (min-width: 768px) {}
+
+/* VERSION MOVIL*/
+
+@media (min-width: 576px) {}
