@@ -71,7 +71,7 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column; 
-    gap: 50px; 
+    gap: 20px; 
     align-items: center;  
 }
 
@@ -83,7 +83,7 @@ main {
 /* CARTA DE PRODUCTO QUE SE ESTA VISUALIZANDO*/
 
 .itemBox {
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -97,26 +97,33 @@ main {
     justify-content: space-between;
     padding: 0px 20px;
     gap: 10px;
+    border-radius: 25px;
+}
+
+.itemImg  div {
+    opacity: 50%;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
 .itemImg > div:first-child {
-    width: 100%;
-    height: 70%;
-    background-image: url(../img/gato1a.jpg);
-    background-size: cover;
+    width: 350px;
+    height: 350px;
+    background-image: url(../img/supermarioD1.jpg);
+    background-size: contain;
     background-position: center;
 }
 
 .itemImg > div:nth-child(2) {
-    width: 100%;
-    height: 30%;
+    width: 350px;
+    height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .itemImg > div:nth-child(2) > div {
-    width: 30%;
+    width: 100px;
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -124,15 +131,19 @@ main {
 }
 
 .itemImg > div:nth-child(2) > div:first-child {
-    background-image: url(../img/gato1b.jpg);
+    background-image: url(../img/supermarioD2.jpg);
 }
 
 .itemImg > div:nth-child(2) > div:nth-child(2) {
-    background-image: url(../img/gato1c.jpg);
+    background-image: url(../img/supermarioD3.jpg);
 }
 
-.itemImg > div:nth-child(2) > div:last-child {
-    background-image: url(../img/gato1d.jpg);
+.itemImg:first-child > div:nth-child(2) > div:last-child {
+    background-image: url(../img/supermarioD4.jpg);
+}
+
+.itemImg  div:hover {
+    opacity: 100%;
 }
 
 
@@ -140,9 +151,12 @@ main {
     width: 40%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 }
 
+.itemInfo p {
+    font-size: 0.5rem;
+}
 /* SECCION INFERIOR - OTROS PRODUCTOS QUE SE PRESENTAN COMO SUGERENCIA */
 
 .otherItems {
@@ -177,6 +191,7 @@ main {
     height: 400px;
     background-color: black;
     border-radius: 15px;
+    font-size: 1rem;
 }
 
 
@@ -184,7 +199,6 @@ main {
 
 footer {
     width: 100%;
-    height: 5vh;
     padding: 20px;
     color: white;
     background-color: black;

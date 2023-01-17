@@ -96,6 +96,58 @@ header > img {
     gap: 30px;
 }
 
+.switch-content {
+	width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+ 
+.checkbox {
+	opacity: 0;
+}
+
+.label {
+	background-color: #B92326;
+    border-radius: 25px;
+	transition: all 0.5s ease-in;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    padding: 5px;
+}
+
+.label img {
+	height: 100%;
+    cursor: pointer;
+    filter: invert(100%);
+}
+
+.ball {
+	width: 20px;
+	height:20px;
+    top: 20px;
+	border-radius: 100px;
+    transition: all 0.5s ease;
+}
+
+
+.darkcheckbox {
+	background-color: rgb(104, 27, 27);
+}
+
+.ballLight {
+	left: 20px;
+	background-color: brown;
+}
+
+.ballDark {
+	left: 180px;
+	background-color: rgb(104, 27, 27);
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -109,41 +161,40 @@ nav ul {
     transition: all 1s ease-in;
 }
 
-nav  ul > li {
+.menuNav {
     padding: 5px 10px;
     transition: all 0.5s ease-in;
     border-radius: 5px;
 }
 
-nav ul > li:first-child {
+.menuNav:first-child {
     border: 1px solid #B92326;
     color:#B92326;
 }
 
-nav ul > li:not(nav ul > li:last-child):hover {
+.menuNav:first-child:not(.menuNav:last-child):hover {
     background-color: #B92326;
     color: white;
 }
 
-nav ul > li:last-child {
+.menuNav:last-child {
     border: 1px solid lightgrey;
     color: lightgrey;
     display: flex;
     gap: 30px;
 }
 
-nav ul > li:last-child > a {
+.menuNav:last-child > a {
     padding: 5px;
     border-radius: 5px;
     transition: all 0.5s ease;
 }
 
-nav ul > li:last-child > a:first-child {
+.menuNav:last-child > a:first-child {
     background-color: lightgrey;
     color: white;
 }
-
-nav ul > li:last-child > a:hover {
+.menuNav:last-child > a:hover {
     background-color: lightgrey;
     color: white;
 }
@@ -153,7 +204,7 @@ nav a {
 }
 
 
-#lupa > img {
+#lupaImg {
     width: 20px;
     height: 20px;
     filter: invert(50%);
@@ -469,11 +520,12 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     transition: all 0.5s ease-in;
     top: 0;
     left: 0;
     opacity: 0%;
+    z-index: 2;
 }
 
 .buscar {

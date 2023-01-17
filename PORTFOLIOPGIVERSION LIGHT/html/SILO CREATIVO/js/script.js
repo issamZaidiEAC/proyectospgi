@@ -77,9 +77,7 @@ cerrarBuscar.addEventListener("click", function(){
     document.body.style.overflowY = "overlay";
 })
 
-//INTERACCION DEL HEADER ACTIVADA MEDIANTE SCROLL
-
-//CHIVATO DE SCROLL
+//INTERACCION BOTON LUPA //INTERACCION BUSQUEDA (BLOQUEO DE SCROLL)
 
 // window.onscroll=function(){
 //     console.log( 
@@ -92,7 +90,11 @@ const header = document.getElementById("header");
 
 const logo = document.getElementById("logo");
 
-const menuNav = document.querySelectorAll("menuNav");
+const lupaImg = document.getElementById("lupaImg");
+
+const linksNav = document.querySelectorAll(".menuNav");
+
+const links = document.querySelectorAll(".navLink");
 
 let scrollY = 0;
 
@@ -103,22 +105,21 @@ function scrollYLogger(){
 }
 
 window.addEventListener("scroll", scrollYLogger);
-
 window.addEventListener("scroll", function(){
     if (scrollY > 50){
         header.style.position = "fixed";
         header.style.top = "0";
-        header.style.height = "10vh";
+        header.style.height = "7vh";
+        header.style.padding = "0px 20px";
         header.style.backgroundColor = "#B92326";
-        //logo.setAttribute("src", "../src/silo-mini.webp");
         logo.src = "src/silo-creativo-scroll.webp";
-        
-        menuNav.style.filter = "invert(100%)"
-        menuNav.style.backgroundColor = "B92326"
+        lupaImg.style.filter = "invert(100%)";
     } else {
         header.style.position = "static";
         header.style.top = "0";
+        header.style.height = "15vh";
         header.style.backgroundColor = "#f7f5ef";
         logo.src = "src/silo-creativo.webp";
-    }; 
+        lupaImg.style.filter = "invert(50%)"
+    };
 });
