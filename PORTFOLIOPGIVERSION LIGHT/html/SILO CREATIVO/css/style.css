@@ -296,6 +296,7 @@ section {
     width: 100%;
     height: 200px;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 #importante  .newsCardImageBox {
@@ -305,7 +306,26 @@ section {
 .cardImage {
     width: 100%;
     height: 100%;
-    background-color: black;
+}
+
+#importante .cardImage {
+    background-image: url(../src/wordpress-lista-contenidos-cpt.webp) ;
+}
+
+.news > div:nth-child(2) .newsCard:nth-child(2) .cardImage {
+    background-image: url(../src/silomag-138.webp);
+}
+
+.news > div:nth-child(3) .newsCard:first-child .cardImage {
+    background-image: url(../src/wordpress-patrones-editables.webp);
+}
+
+.news > div:nth-child(3) .newsCard:nth-child(2) .cardImage {
+    background-image: url(../src/colores-pantone.webp);
+}
+
+.news > div:nth-child(3) .newsCard:nth-child(3) .cardImage {
+    background-image: url(../src/calendario-niviembre-huckleberry-finn-2022-silocreativo.webp);
 }
 
 .newsContent {
@@ -343,7 +363,6 @@ section {
 footer {
     background-color: #BF393B;
     width: 100%;
-    height: 30vh;
     display: flex;
     /* flex: 1 1 30%; */
     flex-direction: row;
