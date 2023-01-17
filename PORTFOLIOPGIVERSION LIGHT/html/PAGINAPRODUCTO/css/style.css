@@ -17,6 +17,7 @@ body {
     align-items: center;
     scroll-behavior: smooth;
     overflow-y: overlay;
+    gap: 5px;
 }
 
 /* width */
@@ -49,19 +50,33 @@ body {
 
 header {
     width: 100vw;
-    height: 10vh;
+    height: 15vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    background-color: rgb(99, 99, 99);
 }
 
 .logo {
+    width: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 3vh;
+    font-size: 0.8rem;
+    gap: 30px;
+    color: white;
+}
+
+.logo img {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 30px;
 }
 
@@ -109,8 +124,8 @@ main {
 .itemImg > div:first-child {
     width: 350px;
     height: 350px;
-    background-image: url(../img/supermarioD1.jpg);
-    background-size: contain;
+    background-image: url(../img/pokemonAmarillo.webp);
+    background-size: cover;
     background-position: center;
 }
 
@@ -131,15 +146,15 @@ main {
 }
 
 .itemImg > div:nth-child(2) > div:first-child {
-    background-image: url(../img/supermarioD2.jpg);
+    background-image: url(../img/pika.jpg);
 }
 
 .itemImg > div:nth-child(2) > div:nth-child(2) {
-    background-image: url(../img/supermarioD3.jpg);
+    background-image: url(../img/pika2.jpg);
 }
 
 .itemImg:first-child > div:nth-child(2) > div:last-child {
-    background-image: url(../img/supermarioD4.jpg);
+    background-image: url(../img/pika3.jpg)
 }
 
 .itemImg  div:hover {
@@ -162,9 +177,10 @@ main {
 .otherItems {
     width: 90%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 20px;
     overflow: hidden;
+    padding: 100px 30px;
 }
 
 .otherItems::-webkit-scrollbar {
@@ -188,12 +204,43 @@ main {
 
 .itemCard  div {
     width: 300px;
-    height: 400px;
-    background-color: black;
+    height: 300px;
     border-radius: 15px;
-    font-size: 1rem;
+    background-size: cover;
+    filter: drop-shadow(0px 11px 5px rgba(0, 0, 0, 0.5));
 }
 
+.itemCard:first-child div {
+    background-image: url(../img/pokemonRojo.webp);
+}
+
+.itemCard:nth-child(2) div {
+    background-image: url(../img/pokemonOro.webp);
+}
+
+.itemCard:nth-child(3) div {
+    background-image: url(../img/pokemonPlata.webp);
+}
+
+.itemCard:nth-child(4) div {
+    background-image: url(../img/pokemonCristal.webp);
+}
+
+.itemCard:nth-child(5) div {
+    background-image: url(../img/pokemonPinball.jpg);
+}
+
+.itemCard:nth-child(6) div {
+    background-image: url(../img/zeldaAw.jpg);
+}
+
+.itemCard:nth-child(7) div {
+    background-image: url(../img/metroidZero.webp);
+}
+
+.itemCard:nth-child(8) div {
+    background-image: url(../img/land2.webp);
+}
 
 /* FOOTER */
 
