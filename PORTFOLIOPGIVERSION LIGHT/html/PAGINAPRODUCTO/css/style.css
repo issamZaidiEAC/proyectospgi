@@ -148,16 +148,21 @@ main {
 .otherItems {
     width: 90%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    gap: 100px;
     padding: 20px;
-    overflow-x: scroll;
+    overflow: hidden;
 }
 
 .otherItems::-webkit-scrollbar {
     display: none;
+}
+
+#dragMenu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
 }
 
 .itemCard {
