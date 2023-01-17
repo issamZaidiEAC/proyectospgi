@@ -7,6 +7,7 @@
     padding: 0;
     border: none;
     background: none;
+    text-decoration: none;
 }
 
 body {
@@ -74,6 +75,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
+    position: static;
 }
 
 #abrirMenu, #burguer {
@@ -149,9 +151,10 @@ nav a {
 }
 
 
-#lupa {
-    width: 30px;
-    height: 30px;
+#lupa > img {
+    width: 20px;
+    height: 20px;
+    filter: invert(50%);
 }
 /* CONTENIDO */
 
@@ -235,6 +238,7 @@ section {
     height: 80%;
     overflow: hidden;
     border-radius: 5px;
+    filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.5));
 }
 
 .plantillas .cardImage {
@@ -244,9 +248,17 @@ section {
 }
 
 .cardInfo {
-    font-weight: 100;
     color: gray;
     width: 100%;
+}
+
+.cardInfo > a > h2 {
+    font-weight: 400;
+    transition: color 0.3s ease-in;
+}
+
+.cardInfo > a > h2:hover {
+    color: #B92326;
 }
 
 

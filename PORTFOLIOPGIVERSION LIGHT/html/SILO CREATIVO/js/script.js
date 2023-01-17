@@ -76,3 +76,34 @@ cerrarBuscar.addEventListener("click", function(){
     tagPanel.style.display = "none";
     document.body.style.overflowY = "overlay";
 })
+
+// window.onscroll=function(){
+//     console.log( 
+//       'top: '  + (window.pageYOffset || document.documentElement.scrollTop) + ' ' +
+//       'left: ' + (window.pageXOffset || document.documentElement.scrollLeft)
+//     );
+// }
+
+const header = document.getElementById("header");
+
+let scrollY = 0;
+
+function scrollYLogger(){
+    scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+    console.log('Scroll Y:'+scrollY)
+}
+
+window.addEventListener("scroll", scrollYLogger);
+window.addEventListener("scroll", function(){
+    if (scrollY > 50){
+        header.style.position = "fixed";
+        header.style.top = "0";
+        header.style.height = "10vh";
+        header.style.backgroundColor = "#B92326";
+    } else {
+        header.style.position = "static";
+        header.style.top = "0";
+        header.style.backgroundColor = "#f7f5ef";
+    }; 
+});
