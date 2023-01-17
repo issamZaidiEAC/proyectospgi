@@ -12,6 +12,11 @@
 body {
     font-family: work sans;
     background-color: #f7f5ef;
+    overflow-y: overlay;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* width */
@@ -21,7 +26,7 @@ body {
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: rgba(136, 136, 136, 0.518);
   }
   
   /* Handle */
@@ -35,10 +40,11 @@ body {
   }
 
 .wrapper{
-    width: 100%;
+    width: 100vw;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* TAGS */
@@ -50,11 +56,12 @@ body {
 
 .tags a {
     text-decoration: none;
-    color: white;
-    background-color: grey;
-    padding: 5px;
-    border-radius: 5px;
-} 
+}
+
+.cardImage {
+    background-position: center;
+    transition: all 0.5s ease-in-out;
+}
 
 /* ESTILO PARA EL ENCABEZADO */
 
@@ -163,21 +170,19 @@ section {
 
 .info > div {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
 }
 
 .titulo {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 30px;
     padding: 80px 0px;
 }
 
 .titulo h1 {
-	font-size: clamp(7vw, 7vw, 15vw);
+	font-size: clamp(5rem, 8vw, 2rem);
     font-weight: 600;
 	text-align: center;
     color: #B92326;
@@ -185,10 +190,11 @@ section {
 }
 
 .titulo p {
-    padding: 0% 20%;
+    padding: 0px 20%;
     text-align: center;
-    font-size: 21px;
+    font-size: clamp(1.2rem, 1.2rem, 1vw);
     font-weight: 400;
+    line-height: 1.5;
     color: grey;
 }
 
@@ -207,6 +213,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
 .card {
@@ -225,7 +232,7 @@ section {
     border-radius: 5px;
 }
 
-.cardImage {
+.plantillas .cardImage {
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -303,9 +310,14 @@ section {
     height: 400px;
 }
 
-.cardImage {
+.news .cardImage {
     width: 100%;
     height: 100%;
+    background-size: cover;
+}
+
+.news .cardImage:hover {
+    transform: scale(1.2);
 }
 
 #importante .cardImage {
@@ -352,11 +364,25 @@ section {
 
 .news .tags a {
     text-decoration: none;
+    font-size: 0.8rem;
     color: white;
-    background-color: grey;
+    background-color: lightgrey;
     padding: 5px;
     border-radius: 5px;
+    transition: all 0.5s ease;
 } 
+
+.news .dgraf:hover {
+    background-color: #FFBA49;
+}
+
+.news .dweb:hover {
+    background-color: #20A39E;
+}
+
+.news .wpress:hover {
+    background-color: #26408B;
+}
 
 /* FOOTER */
 
@@ -367,23 +393,37 @@ footer {
     /* flex: 1 1 30%; */
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     color: white;
-    padding: 20px;
+    padding: 80px 100px 20px 100px;
+}
+
+.about {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+}
+
+.tagline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;   
 }
 
 .social {
-    width: 30%;
+    width: 100%;
     height: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 10px;
 }
 
 .social img {
-    height: 90%;
+    height: 20px;
     filter: invert(100%);
     opacity: 0.5;
     transition: all 0.5s ease;
@@ -394,8 +434,11 @@ footer {
 }
 
 .sitemap {
+    width: 20%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 }
 
 /* VENTANA MODAL */
@@ -492,13 +535,29 @@ footer {
 }
 
 @media (max-width: 1100px){
-    .info div {
+    .plantillas {
         max-width: 80vw;
         flex-direction: column;
+        gap: 30px;
     }
+
     .card {
         width: 100%;
+        align-items: center;
     }
+
+    .cardInfo {
+        text-align: center;
+    }
+
+    #importante {
+        width: 350px;
+    }
+
+    #importante  .newsCardImageBox {
+        height: 200px;
+    }
+
 }
 
 
