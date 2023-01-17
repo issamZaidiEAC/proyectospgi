@@ -54,31 +54,25 @@ botonMenu.addEventListener("click", function(){
 })
 
 
-//INTERACCION BOTON LUPA 
-const modal = document.getElementById("modalwrapper")
-const botonLupa = document.getElementById("lupa");
+//INTERACCION BOTON LUPA //INTERACCION BUSQUEDA (BLOQUEO DE SCROLL)
+const modal = document.getElementById("modal");
+const botonLupa = document.getElementById('lupa');
 const cerrarBuscar = document.getElementById("cerrarbuscar")
 const buscar = document.getElementById("buscar");
 const tagPanel = document.getElementById("tagPanel");
 
-// botonLupa.addEventListener("click", function (){
-//     modal.style.display = "flex;"
-//     buscar.style.top = "0px";
-//     tagPanel.style.display = "flex";
-// })
+botonLupa.addEventListener("click", function (){
+    modal.style.display = "flex";
+    modal.style.opacity = "100%";
+    buscar.style.top = "0";
+    tagPanel.style.display = "flex";
+    document.body.style.overflowY = "hidden";
+})
 
-// cerrarBuscar.addEventListener("click", function(){
-//     buscar.style.top = "-1000px";
-//     tagPanel.style.display = "none"
-// })
-
-//INTERACCION BUSQUEDA (BLOQUEO DE SCROLL)
-
-
-// if (modal.style.display = "flex") {
-//     document.body.style.overflow = "hidden";
-// } else {
-//     document.body.style.overflow = "auto";
-// }
-
-
+cerrarBuscar.addEventListener("click", function(){
+    buscar.style.top = "-1000px";
+    modal.style.display = "none";
+    modal.style.opacity = "0%";
+    tagPanel.style.display = "none";
+    document.body.style.overflowY = "overlay";
+})
