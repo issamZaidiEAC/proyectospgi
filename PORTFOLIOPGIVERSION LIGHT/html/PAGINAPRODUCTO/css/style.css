@@ -250,6 +250,77 @@ footer {
     background-color: black;
 }
 
+/* MODAL */
+
+#modal{
+    margin: auto;
+}
+
+.modalWrapper {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+dialog button {
+    width: 50px;
+    height: 50px;
+    align-self: flex-end;
+}
+
+.imgBox {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 5px solid #0078f8;
+}
+
+.imgs {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/modal1.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: all;
+}
+
+#izquierda, #derecha {
+    width: 15%;
+    height: 100%;
+    opacity: 0%;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#derecha {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.700) 100%);
+}
+
+#izquierda {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.700) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+#izquierda:hover, #derecha:hover {
+    opacity: 100%;
+}
+
+#modal i {
+    filter: invert(100%);
+}
+
+
+
 /* RESPONSIVE */
 
 /* VERSION ESCRITORIO MUY GRANDE*/
