@@ -3,8 +3,6 @@
 const wrapper = document.querySelector(".otherItems")
 const gallery = document.getElementById("dragMenu");
 
-console.log(wrapper, gallery);
-
 let dragging = false, mouseLocation, galleryLocation;
 
 const dragStart = e => {
@@ -88,4 +86,35 @@ toRight.addEventListener("click", function(){
         imgIndex += 1;
     }  
     modalImgWrapper.style.backgroundImage = imgs[imgIndex];
+})
+
+
+//INTERACCION CARRETE DE IMAGENES EN CARTA DE PRODUCTO
+
+const cont1 = document.getElementById("img1");
+const cont2 = document.getElementById("img2");
+const cont3 = document.getElementById("img3");
+const cont4 = document.getElementById("img4");
+
+console.log(cont1);
+
+const img1 = "url('./img/pokemonAmarillo.webp')";
+const img2 = "url('./img/pokemonAmarillo.webp')";
+const img3 = "url('./img/pokemonAmarillo.webp')";
+const img4 = "url('./img/pokemonAmarillo.webp')";
+
+
+const carrete = [cont1, cont2, cont3, cont4];
+const urls = [img1, img2, img3, img4];
+
+cont1.addEventListener("click", function(){
+    for (let i = 0; i < carrete.length; i++){
+        if(i < carrete.length){
+            let imgAux = urls[i]
+            carrete[i].style.backgroundImage = urls[urls.length - i];
+            carrete[i+1].style.backgroundImage = imgAux;
+        } else {
+            carrete[i].style.backgroundImage = urls[carrete.length - 1];
+        }
+    };
 })
