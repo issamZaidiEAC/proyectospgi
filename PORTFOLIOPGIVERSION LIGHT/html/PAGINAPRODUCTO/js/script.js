@@ -80,7 +80,7 @@ toLeft.addEventListener("click", function(){
 
 
 toRight.addEventListener("click", function(){
-    if (imgIndex == 2) {
+    if (imgIndex ==  2) {
         imgIndex = 0;
     } else {
         imgIndex += 1;
@@ -99,22 +99,44 @@ const cont4 = document.getElementById("img4");
 console.log(cont1);
 
 const img1 = "url('./img/pokemonAmarillo.webp')";
-const img2 = "url('./img/pokemonAmarillo.webp')";
-const img3 = "url('./img/pokemonAmarillo.webp')";
-const img4 = "url('./img/pokemonAmarillo.webp')";
+const img2 = "url('./img/pika.jpg')";
+const img3 = "url('./img/pika2.jpg')";
+const img4 = "url('./img/pika3.jpg')";
 
+let selectedImage = [false, false, false]
 
-const carrete = [cont1, cont2, cont3, cont4];
-const urls = [img1, img2, img3, img4];
+cont2.addEventListener("click", function(){
+    if(!selectedImage[0]){
+        cont1.style.backgroundImage = img2;
+        cont2.style.opacity = "50%";
+        selectedImage[0] = true;
+    } else {
+        cont1.style.backgroundImage = img1;
+        cont2.style.opacity = "100%";
+        selectedImage[0] = false;
+    }
+})
 
-cont1.addEventListener("click", function(){
-    for (let i = 0; i < carrete.length; i++){
-        if(i < carrete.length){
-            let imgAux = urls[i]
-            carrete[i].style.backgroundImage = urls[urls.length - i];
-            carrete[i+1].style.backgroundImage = imgAux;
-        } else {
-            carrete[i].style.backgroundImage = urls[carrete.length - 1];
-        }
-    };
+cont3.addEventListener("click", function(){
+    if(!selectedImage[1]){
+        cont1.style.backgroundImage = img3;
+        cont3.style.opacity = "50%";
+        selectedImage[1] = true;
+    } else {
+        cont1.style.backgroundImage = img1;
+        cont3.style.opacity = "100%";
+        selectedImage[1] = false;
+    }
+})
+
+cont4.addEventListener("click", function(){
+    if(!selectedImage[2]){
+        cont1.style.backgroundImage = img4;
+        cont4.style.opacity = "50%";
+        selectedImage[2] = true;
+    } else {
+        cont1.style.backgroundImage = img1;
+        cont4.style.opacity = "100%";
+        selectedImage[2] = false;
+    }
 })
