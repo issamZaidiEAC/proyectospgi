@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     background-color: #FDB035;
     color: #131B23;
-    font-family: rubik;
+    font-family: 'Rubik';
 }
 
 header {
@@ -26,6 +26,7 @@ header {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+    color: #FDB035;
 }
 
 .animatedBg {
@@ -40,6 +41,14 @@ section {
     width: 100vh;
     height: 100vw;
     display: flex;
+}
+
+.animatedBg {   
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .portada {
