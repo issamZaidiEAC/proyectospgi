@@ -98,19 +98,29 @@ article {
 }
 
 
-.AnimatedBG {
+.parallax-window {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    width: 85vw;
+    height: 100vh;
     z-index: 0;
+    align-self: flex-end;
 }
 
-.AnimatedBG svg{
+.layer {
     height: 20px;
+    position: absolute;
 }
 
+.p1 {
+    top: 30px;
+    left: 30px;
+}
+
+.p2 {
+    top: 300px;
+}
 
 .cover {
     flex-direction: column;
@@ -363,8 +373,9 @@ progress {
 .worksPanel div {
     width: 200px;
     height: 200px;
-    background-color: #1E1E24;
     border-radius: 15px;
+    background-position: center;
+    background-size: contain;
 }
 
 .plans .sectionBox {
@@ -414,5 +425,27 @@ progress {
     border-radius: 25px;
 }
 
+#work1 {
+    background-image: url(../assets/flat-shopping-online.png);
+}
 
+#work2 {
+    background-image: url(../assets/flat-graphic-design-software-on-pc.png);
+}
+
+#work3 {
+    background-image: url(../assets/flat-graphic-design-workspace.png);
+}
+
+#work4 {
+    background-image: url(../assets/flat-message-sent-1.png);
+}
+
+#work5 {
+    background-image: url(../assets/flat-website-prototyping.png);
+}
+
+#work6 {
+    background-image: url(../assets/flat-online-search.png);
+}
 
