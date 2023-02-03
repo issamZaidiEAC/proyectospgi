@@ -1,10 +1,5 @@
-import {CountUp} from './countUp.js-master/dist/countUp.js';
+import {CountUp} from '../countUp.js-master/dist/countUp.umd'
 
-var count = new CountUp('count', 1000);
+var count = new CountUp.CountUp('count', 1000);
 
-if (!count.error) {
-      count.start();
-    } else {
-      console.error(count.error);
-    }
-
+count.start();
