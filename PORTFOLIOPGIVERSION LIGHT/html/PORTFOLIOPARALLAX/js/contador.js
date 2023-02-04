@@ -1,5 +1,7 @@
-import {CountUp} from '../countUp.js-master/dist/countUp.umd'
+import { CountUp } from '../countUp/dist/countUp.js';
 
-var count = new CountUp.CountUp('count', 1000);
+let count1 = new CountUp('count1', 1000);
 
 count.start();
+
+console.log(count1);

@@ -119,14 +119,24 @@ section {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    gap: 100px;
     z-index: 1;
     justify-content: center;
     align-items: center;
     color: #1E1E24;
+    padding: 30px;
+}
+
+section > h2 {
+    align-self: flex-start;
+    text-shadow: 3px 3px 0px #FFFFFF;
 }
 
 .sectionBox {
     display: flex;
+    gap: 50px;
+    align-items: center;
 } 
 
 article {
@@ -274,7 +284,6 @@ article {
 }
 
 .about {
-    padding: 30px;
     align-items: center;
     justify-content: center;
 }
@@ -397,7 +406,6 @@ progress {
 }
 
 .experience .sectionBox {
-    gap: 30px;
     flex-direction: column;
 
 }
@@ -450,7 +458,17 @@ progress {
 
 .works .sectionBox {
     flex-direction: column;
-    gap: 30px;
+}
+
+.works .linkButton {
+    background-color: #1E1E24;
+    color: #FCFF4B;
+    font-size: 0.5rem;
+}
+
+.works .linkButton:hover {
+    color: #1E1E24;
+    background-color: #FCFF4B;
 }
 
 .menuWorks {
@@ -478,55 +496,6 @@ progress {
     background-size: contain;
 }
 
-.plans .sectionBox {
-    flex-direction: column;
-    gap: 30px;
-}
-
-.plans .sectionBox > div {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-}
-
-.plans .card {
-    width: 300px;
-    height: 400px;
-    background-image: linear-gradient(0deg,#1e1e24,#1e1e24c3);
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 20px;
-    font-size: 0.5rem;
-    line-height: 1.5;
-    text-align: center;
-}
-
-
-.plans .card a {
-    color: white;
-}
-
-.reviews .sectionBox {
-    flex-direction: column;
-    gap: 20px;
-}
-
-.reviewBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.review {
-    padding: 20px;
-    background-color: white;
-    border-radius: 25px;
-}
-
 #work1 {
     background-image: url(../assets/HANNYAMASK.jpg);
 }
@@ -550,6 +519,65 @@ progress {
 #work6 {
     background-image: url(../assets/SlimeEdicionDaf.gif);
 }
+
+
+.plans .sectionBox {
+    flex-direction: column;
+}
+
+.plans .sectionBox > div {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.plans .card {
+    width: 300px;
+    height: 400px;
+    background-image: linear-gradient(0deg,#1e1e24,#1e1e24c3);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    font-size: 0.5rem;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0px 20px;
+}
+
+.reviews .sectionBox {
+    flex-direction: column;
+}
+
+.reviewBox {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    line-height: 2;
+}
+
+.review {
+    width: 300px;
+    font-size: 0.6rem;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
